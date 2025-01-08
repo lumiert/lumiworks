@@ -22,8 +22,8 @@ function Footer() {
                     <ul>
                         <li><CornerDownRight size="12" /><a href="#inicio">Início</a></li>
                         <li><CornerDownRight size="12" /><a href="#planos">Planos</a></li>
+
                         <li><CornerDownRight size="12" /><a href="#sobre">Sobre</a></li>
-                        <li><CornerDownRight size="12" /><a href="#clientes">Clientes</a></li>
                     </ul>
                 </div>
                 </div>

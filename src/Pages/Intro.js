@@ -11,10 +11,9 @@ function Intro() {
                 <div className="header-bottom">
                     <a href='#inicio'>Início</a>
                     <a href='#planos'>Planos</a>
+
                     <a href='#sobre'>Sobre</a>
-                    <a href='#clientes'>Clientes</a>
                 </div>
-                
             </div>
             <div className="intro-text">
                 <p className="intro-title">Assessoria, produção musical e distribuição para artistas.</p>

@@ -4,8 +4,8 @@ import {MessageSquareShare, Check, X, Disc3, Library} from 'lucide-react'
 
 function Planos() {
     return(
-        <div id="planos" className="Planos">
-            <div className="starter">
+        <div  className="Planos">
+            <div id="planos" className="starter">
                 <div className="vinyl-icon"><h1 className="plan-name">Starter</h1><Disc3 size="64" /></div>
                 
                 <h1 className="price-risk">R$ 299</h1>
