@@ -1,0 +1,79 @@
+.Planos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--black);
+  background-color: white;
+}
+
+.Planos ul li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.plan-name {
+  font-size: 3rem;
+}
+
+.starter, .pro {
+  width: 400px;
+  margin-inline: 32px;
+}
+
+.price {
+  font-size: 3rem;
+  color: rgb(236, 59, 59);
+  text-shadow: 0 0 24px hsla(0, 100%, 50%, 0.178);
+}
+
+.price-risk {
+  margin: 0;
+  line-height: 0px;
+}
+
+.price-risk::before {
+  content: "";
+  position: absolute;
+  margin-top: 2px;
+  width: 70px;
+  height: 2px;
+  background-color: red;
+}
+
+.vinyl-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.horz-divider {
+  content: "";
+  position: absolute;
+  height: 300px;
+  width: 2px;
+ 
+  background-color: var(--black);
+}
+
+@media screen and (max-width: 600px){
+  .Planos {
+    flex-direction: column;
+  }
+  .pro, .starter {
+    justify-content: center;
+    width: 100%;
+    margin-block: 64px;
+  }
+  .horz-divider {
+    content: "";
+    position: absolute;
+    
+    height: 2px;
+    width: 90%;
+    
+    background-color: var(--black);
+  }
+}

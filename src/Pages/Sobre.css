@@ -1,0 +1,22 @@
+.Sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: white;
+}
+
+.sobre {
+    text-align: justify;
+    max-width: 600px;
+}
+
+.sobre-img {
+    position: absolute;
+    object-fit: cover;
+    height: 500px;
+    width: 100%;
+    filter: brightness(25%);
+    
+    z-index: -1;
+}

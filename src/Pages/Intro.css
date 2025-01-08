@@ -1,0 +1,157 @@
+.Intro {
+  position: relative; /* Importante para que o video se posicione corretamente dentro dessa div */
+  width: 100%;
+  height: 100vh; /* Faz o contêiner ocupar toda a altura da tela */
+  overflow: hidden;
+}
+
+.Intro span {
+  position: absolute;
+  right: 3%;
+  bottom: 5rem;
+  width: 1px;
+  height: 3rem;
+  background: white;
+  animation: scrolldown 2s ease-in-out infinite both;
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: scaleY(0);
+    transform-origin: center top;
+  }
+  49% {
+    transform-origin: center top;
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  51% {
+    transform-origin: center bottom;
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: center bottom;
+  }
+}
+
+.hover-glow {
+  position: relative; /* Adicionado para referência dos pseudoelementos */
+  
+}
+
+.hover-glow::before,
+.hover-glow::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(68, 0, 255, 0); /* Começa transparente */
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0;
+  transition: all 1s ease; /* Para suavizar todas as propriedades */
+}
+
+.hover-glow::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5); /* Adicionado para centralização e escala inicial */
+}
+
+.hover-glow::after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5); /* Mesma configuração */
+}
+
+.hover-glow:hover::before {
+  background-color: rgba(68, 0, 255, 1); /* Cor visível */
+  margin-top: 100px;
+  margin-left: 100px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2); /* Escala maior para efeito suave */
+}
+
+.hover-glow:hover::after {
+  background-color: rgba(0, 255, 242, 1); /* Outra cor */
+  margin-top: -100px;
+  margin-left: -100px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5); /* Escala diferente para variar */
+}
+
+.header {
+  display: flex;
+  padding: 8rem;
+  z-index: 1;
+}
+
+.header-top, .header-bottom {
+  display: flex;
+}
+
+.header-bottom {
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 24px;
+}
+
+.header a {
+  color: #e0e0e0;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+  transition: .3s;
+}
+
+.header a:hover {
+
+  border-bottom: 2px solid rgb(189, 247, 255);
+}
+
+.intro-brand {
+  color: white;
+}
+
+.intro-title {
+  font-size: 3rem;
+  font-weight: 200;
+  max-width: 70%;
+}
+
+.intro-text {
+  position: absolute;
+  top: 18vh;
+  left: 0;
+  padding: 12rem;
+  color: white;
+  z-index: 1; /* Garante que o texto fique sobre o vídeo */
+}
+
+.video-background {
+  position: absolute; /* Posiciona o vídeo em relação ao contêiner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que o vídeo cubra a tela sem distorção */
+  z-index: -1; /* Coloca o vídeo atrás do texto */
+}
+
+@media screen and (max-width: 600px){
+  .header {
+    flex-direction: column;
+    padding: 0;
+    margin: 24px;
+  }
+  .header-bottom {
+    justify-content: space-between;
+  }
+  .intro-text {
+    top: 14vh;
+    padding: 24px;
+  }
+}
